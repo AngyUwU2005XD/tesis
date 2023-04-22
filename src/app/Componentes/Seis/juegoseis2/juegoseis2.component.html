@@ -1,0 +1,43 @@
+<body class="cursor" style="background-size: cover; height: 811px; width: 100%;" background="./../../../../assets/fondos aaaaaaa/pantalla_juego_2-2.png">
+    <h1 style="color: transparent;">.</h1>
+    <!-- <audio  src="../../../../assets/Audios_completos/CorregidoAudios/nivel 2sol.aac" autoplay  class="audio"></audio> -->
+    <div class="uwu">
+        <div style="text-align: left;" class="uno">
+            <audio id="m" src="../../../../assets/Audios_completos/Número 6/6 audio n2.aac"></audio>
+            <br>
+            <button class="boton" onclick="document.getElementById('m').play()">
+                <img src="../../../../assets/ImagenesAudios/audio2.png" width="200px" height="200px">
+            </button>
+        </div>
+
+        <div class="contenedor">
+            <button class="boton" *ngFor="let item of arreglo" (click)="verificar(item.respuesta)"><img [src]='item.url' width="180" height="180"> </button>
+        </div>
+            <br>
+        </div>
+        
+        <div class="modal"  *ngIf="correcta" style="justify-content: space-evenly ;flex-direction: row; padding-left: 7.5%; padding-right: 7.5%; background-color: rgb(0,0,0,0.4); width: 100%; height: 100%; overflow: auto; top: 0; padding-top: 10px; z-index: 1; position: fixed; text-align: center;">
+        
+            <div class="modalcont">
+            <img src="../../../../assets/ext/gato_1.png" width="100px" >
+            <audio  src="../../../../assets/AudiosUwU/correctoaudio.mp3" autoplay  class="audio"></audio>
+            <br>
+            <button  class="boton" (click)="Juegouno3(); botonsonido()" style="background: transparent; border: none;"><img src="../../../../assets/ext/seguir.png" width="189px"></button>
+            </div>
+          
+            </div>
+        
+            <div class="modal"  *ngIf="incorrecta" style="justify-content: space-evenly ;flex-direction: row; padding-left: 7.5%; padding-right: 7.5%; background-color: rgb(0,0,0,0.4); width: 100%; height: 100%; overflow: auto; top: 0; padding-top: 10px; z-index: 1; position: fixed; text-align: center;">
+            
+            <div class="modalcont">
+            <img src="../../../../assets/ext/gato_2.png" width="150px" >
+            <audio  src="../../../../assets/AudiosUwU/errorsonido.mp3" autoplay  class="audio"></audio>
+            <button (click)="cerrar(); botonsonido()" class="boton"><img src="../../../../assets/ext/repetir.png" width="150px"></button>
+            </div>
+          
+            </div>
+    
+        <br>
+        
+    <button (click)="menu(); botonsonido()" class="boton"><img src="../../../../assets/casita (1).png" width="50px"></button>
+        </body>

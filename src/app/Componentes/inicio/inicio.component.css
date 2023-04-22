@@ -1,0 +1,14 @@
+.botonaudio{
+    width: 150px;
+    background: transparent;
+    border: none;
+    position: relative;
+    transform: translate(-17%, 10px);
+    cursor: url(../../../assets/señalarcursor.png), auto;
+
+}
+
+.cursor{
+    cursor: url(../../../assets/cursor_flecha.png), auto;
+  }
+  

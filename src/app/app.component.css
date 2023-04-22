@@ -1,0 +1,12 @@
+.audio{
+ text-align: center;
+}
+.cursor{
+  cursor: url(../assets/cursor_flecha.png), auto;
+
+}
+
+a{
+  cursor: url(../assets/señalarcursor.png), auto;
+
+}

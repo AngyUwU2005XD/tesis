@@ -1,0 +1,10 @@
+.boton{
+    width: 150px;
+    background: transparent;
+    cursor: url(../../../assets/señalarcursor.png), auto;
+    border: none;
+}
+
+.cursor{
+    cursor: url(../../../assets/cursor_flecha.png), auto;
+}
