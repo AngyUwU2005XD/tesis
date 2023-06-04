@@ -7,7 +7,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu3.component.css']
 })
 export class Menu3Component {
+   fecha!: Date;
+   hora!: number;
+   texto!: string;
+   image!: String;
+   image1!: String;
+   contotal:any=0;
+   uno:any=0;
+   dos:any=0;
+   tres:any=0;
+   ho:any=0;
+   
   constructor(private router: Router){}
+  muenu3uwu:any;
+  menu()
+  {
+    this.router.navigate(['menup']);
+  }
   Juego1()
   {
      this.router.navigate(['Juegouno1']);
@@ -20,29 +36,14 @@ export class Menu3Component {
   {
      this.router.navigate(['Juegotres1']);
   }
-  Juego4()
+  ngOnInit(): void 
   {
-     this.router.navigate(['Juegocuatro1']);
-  }
-  Juego5()
-  {
-     this.router.navigate(['Juegocinco1']);
-  }
-  Juego6()
-  {
-     this.router.navigate(['Juegoseis1']);
-  }
-  Juego7()
-  {
-     this.router.navigate(['Juegosiete1']);
-  }
-  Juego8()
-  {
-     this.router.navigate(['Juegoocho1']);
-  }
-  Juego9()
-  {
-     this.router.navigate(['Juegonueve1']);
+   this.fecha = new Date();
+   this.hora = this.fecha.getHours();
+   this.mostrarSaludo();
+    this.muenu3uwu;
+    localStorage.setItem('menuuwu3',this.muenu3uwu.toString());
+    this.uno=localStorage.getItem('uno');
   }
 
   botonsonido() {
@@ -51,4 +52,65 @@ export class Menu3Component {
    audio.load();
    audio.play();
  }
+ mostrarSaludo() 
+ {
+ // -----------------------------------------------------------------------
+   //  if (this.hora >= 12 && this.hora < 18) 
+   //  {
+   //     this.image = "../../../assets/no ai/Principal_idea_copia.png";
+   //     this.ho=1;
+
+   //  }
+
+   //  else if (this.hora >= 0 && this.hora < 12) 
+   //  {
+   //     this.image = "../../../assets/no ai/pi_2.png";
+   //     this.ho=2;
+   //  }
+    
+   //  else if (this.hora >= 18 && this.hora < 24) 
+   //  {
+   //    this.image = "../../../assets/no ai/pi_3.png";
+   //    this.ho=3;
+   //  }
+// ----------------------------------------------------------------------
+if (this.hora >= 0 && this.hora < 12) 
+{
+   this.image = "../../../assets/no ai/Principal_idea_copia.png";
+   this.ho=1;
+
+}
+
+else if (this.hora >= 12 && this.hora < 18) 
+{
+   this.image = "../../../assets/no ai/pi_2.png";
+   this.ho=2;
+}
+
+else if (this.hora >= 18 && this.hora < 24) 
+{
+  this.image = "../../../assets/no ai/pi_3.png";
+  this.ho=3;
+}
+
+// -----------------------------------------------------------------------
+// if (this.hora >= 0 && this.hora < 12) 
+// {
+//    this.image = "../../../assets/no ai/Principal_idea_copia.png";
+//    this.ho=1;
+
+// }
+
+// else if (this.hora >= 18 && this.hora < 24) 
+// {
+//    this.image = "../../../assets/no ai/pi_2.png";
+//    this.ho=2;
+// }
+
+// else if (this.hora >= 12 && this.hora < 18) 
+// {
+//   this.image = "../../../assets/no ai/pi_3.png";
+//   this.ho=3;
+// }
+}
 }

@@ -7,7 +7,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu4.component.css']
 })
 export class Menu4Component {
+   fecha!: Date;
+   hora!: number;
+   texto!: string;
+   image!: String;
+   image1!: String;
+   ho: any=0;
+
+   ngOnInit(): void {
+      this.fecha = new Date();
+      this.hora = this.fecha.getHours();
+      this.mostrarSaludo();
+    }
   constructor(private router: Router){}
+  menu()
+  {
+    this.router.navigate(['menup']);
+  }
   Juego1()
   {
      this.router.navigate(['Juegouno1']);
@@ -51,4 +67,65 @@ export class Menu4Component {
    audio.load();
    audio.play();
  }
+   mostrarSaludo() 
+   {
+     // -----------------------------------------------------------------------
+    // if (this.hora >= 12 && this.hora < 18) 
+    // {
+    //    this.image = "../../../assets/no ai/Principal_idea_copia.png";
+    //    this.ho=1;
+
+    // }
+
+    // else if (this.hora >= 0 && this.hora < 12) 
+    // {
+    //    this.image = "../../../assets/no ai/pi_2.png";
+    //    this.ho=2;
+    // }
+    
+    // else if (this.hora >= 18 && this.hora < 24) 
+    // {
+    //   this.image = "../../../assets/no ai/pi_3.png";
+    //   this.ho=3;
+    // }
+// -----------------------------------------------------------------------
+    if (this.hora >= 0 && this.hora < 12) 
+    {
+       this.image = "../../../assets/no ai/Principal_idea_copia.png";
+       this.ho=1;
+
+    }
+
+    else if (this.hora >= 12 && this.hora < 18) 
+    {
+       this.image = "../../../assets/no ai/pi_2.png";
+       this.ho=2;
+    }
+    
+    else if (this.hora >= 18 && this.hora < 24) 
+    {
+      this.image = "../../../assets/no ai/pi_3.png";
+      this.ho=3;
+    }
+
+// -----------------------------------------------------------------------
+    // if (this.hora >= 18 && this.hora < 24) 
+    // 
+    //    this.image = "../../../assets/no ai/Principal_idea_copia.png";
+    //    this.ho=1;
+
+    // }
+
+    // else if (this.hora >=0  && this.hora < 12) 
+    // {
+    //    this.image = "../../../assets/no ai/pi_2.png";
+    //    this.ho=2;
+    // }
+    
+    // else if (this.hora >= 12 && this.hora < 18) 
+    // {
+    //   this.image = "../../../assets/no ai/pi_3.png";
+    //   this.ho=3;
+    // }
+    }
 }

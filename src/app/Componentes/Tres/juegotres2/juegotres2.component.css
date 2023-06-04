@@ -8,29 +8,106 @@
   position: relative;
   transform: translate(35%, 30px);
 }
-
+.estrella{
+  position: absolute;
+  transform: translate(727.5%, -141px);
+}
+.estrella2{
+  position: absolute;
+  transform: translate(1455.5%, -141px);
+}
+.carita{
+  position: absolute;
+  transform: translate(310%, -80px);
+}
+.carita2{
+  position: absolute;
+  transform: translate(300%, -80px);
+}
 .contenedor{
 width: 50vw;
 height: 40vh;
 display: grid;
 grid-template-columns: 1fr 1fr;
 grid-template-rows: 1fr 1fr;
-gap: 230px 250px;
+gap: 220px 250px;
 position: relative;
-transform: translate(53%, 50px);
+transform: translate(53%, 45px);
 
-}
-.boton{
-  width: 189px;
-  cursor: url(../../../../assets/señalarcursor.png), auto;
-  background: transparent;
-  border: none;
 }
 
 .botonaudio{
   cursor: url(../../../../assets/señalarcursor.png), auto;
   background: transparent;
   border: none;
+}
+
+.boton
+{
+
+  width: 189px;
+  background: transparent;
+  cursor: url(../../../../assets/señalarcursor.png), auto;
+  border: none;
+  transition: transform .5s ease;
+}
+
+.boton:hover 
+{
+  transform: scale(1.2);
+}
+
+.correcto
+{
+  width: 189px;
+  background: transparent;
+  border: none;
+  cursor: url(../../../../assets/señalarcursor.png), auto;
+  transition: transform .5s ease;
+}
+  
+.correcto:hover 
+{
+  transform: translate(100px) scale(1.2);
+}
+
+.incorrecto
+{
+  width: 189px;
+  background: transparent;
+  border: none;
+  cursor: url(../../../../assets/señalarcursor.png), auto;
+  transition: transform .8s ease;
+}
+  
+.incorrecto:hover 
+{
+  transform: rotate(360deg);
+}
+  
+
+.girar
+{
+  background: transparent;
+  border: none;
+  transition: transform .8s ease;
+}
+  
+.girar:hover
+{
+  transform: rotate(360deg);
+}
+
+.grande
+{
+  background: transparent;
+  border: none;
+  transition: transform .5s ease;
+}
+  
+.grande:hover 
+{
+  transform: scale(1.2);
 }
 
 .modalincorrecto {

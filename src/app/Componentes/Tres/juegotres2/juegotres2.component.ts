@@ -9,10 +9,23 @@ import { Router } from '@angular/router';
 export class Juegotres2Component {
   constructor(private router: Router){}
   correcto: any;
-
+  c2num3:any=0;
+  menu3uwu:any=0;
   menu()
   {
      this.router.navigate(['menup']);
+  }
+  menu3()
+  {
+    this.router.navigate(['menu3']);
+  }
+  menu4()
+  {
+    this.router.navigate(['menu4']);
+  }
+  menu5()
+  {
+    this.router.navigate(['menu']);
   }
   Juegouno3()
   {
@@ -36,6 +49,8 @@ export class Juegotres2Component {
         this.imagen2='../../../../assets/numeros_actu/ncua.png'
         this.imagen3='../../../../assets/numeros_actu/nnue.png'
         this.imagen4='../../../../assets/numeros_actu/nsiete.png'
+        this.menu3uwu=localStorage.getItem('menu3uwu');
+        this.c2num3=localStorage.getItem('num3');
         this.arreglo =
         [
           {
@@ -74,11 +89,13 @@ export class Juegotres2Component {
         {
           this.correcta=true;
           console.log(this.correcta);
+          this.c2num3++;
         }
         else
         {
           this.incorrecta=true;
         }
+        localStorage.setItem('c2num3',this.c2num3.toString());
       }
     
       cerrar()

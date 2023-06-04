@@ -6,11 +6,15 @@
 }
 .uno{
     position: relative;
-    transform: translate(40%, 10px);
+    transform: translate(45%, 75px);
 }
 .estrella{
   position: absolute;
-  transform: translate(1225%, -140px);
+  transform: translate(1450%, -135px);
+}
+.carita{
+  position: absolute;
+  transform: translate(310%, -80px);
 }
 .contenedor{
   width: 50vw;
@@ -23,13 +27,47 @@
   transform: translate(47%, 40px);
 
 }
-.boton{
-width: 189px;
-background: transparent;
+
+.boton
+{
+  width: 189px;
+  background: transparent;
   cursor: url(../../../../assets/señalarcursor.png), auto;
   border: none;
+  transition: transform .2s ease;
 }
-
+  
+.boton:hover 
+{
+  transform: scale(1.2);
+}
+  
+.incorrecto
+{
+  width: 189px;
+  background: transparent;
+  border: none;
+  cursor: url(../../../../assets/señalarcursor.png), auto;
+  transition: transform .8s ease;
+}
+  
+.incorrecto:hover 
+{
+  transform: rotate(360deg);
+}
+.correcto
+{
+  width: 189px;
+  background: transparent;
+  border: none;
+  cursor: url(../../../../assets/señalarcursor.png), auto;
+  transition: transform .5s ease;
+}
+  
+.correcto:hover 
+{
+  transform: translate(100px) scale(1.2);
+}
 
 
 .modalincorrecto {

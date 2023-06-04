@@ -11,9 +11,22 @@ export class Juegouno1Component {
   constructor(private router: Router){}
   correcto: any;
   contador:number=0;
+  menu3uwu:any=0;
   menu()
   {
     this.router.navigate(['menup']);
+  }
+  menu3()
+  {
+    this.router.navigate(['menu3']);
+  }
+  menu4()
+  {
+    this.router.navigate(['menu4']);
+  }
+  menu5()
+  {
+    this.router.navigate(['menu']);
   }
   Juegouno2()
   {
@@ -29,10 +42,11 @@ export class Juegouno1Component {
     ngOnInit(): void 
     {
       this.imagen1='../../../assets/res/lapiz.png'
-      this.imagen2='../../../assets/pngs/fl/2.png'
-      this.imagen3='../../../assets/pngs/es/5.png'
-      this.imagen4='../../../assets/pngs/ho/9.png'
+      this.imagen2='../../../assets/pngs/la/7.png'
+      this.imagen3='../../../assets/pngs/la/5.png'
+      this.imagen4='../../../assets/pngs/la/9.png'
       this.contador;
+      this.menu3uwu=localStorage.getItem('menu3uwu');
       this.arreglo =
       [
         {
@@ -77,6 +91,7 @@ export class Juegouno1Component {
         {
           this.incorrecta=true;
         }
+        
         localStorage.setItem('contadoruwu',this.contador.toString());
       }
       

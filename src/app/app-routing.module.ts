@@ -6,10 +6,9 @@ import { Juegocinco3Component } from './Componentes/Cinco/juegocinco3/juegocinco
 import { Juegocuatro1Component } from './Componentes/Cuatro/juegocuatro1/juegocuatro1.component';
 import { Juegocuatro2Component } from './Componentes/Cuatro/juegocuatro2/juegocuatro2.component';
 import { Juegocuatro3Component } from './Componentes/Cuatro/juegocuatro3/juegocuatro3.component';
-import { Juegodos1Component } from './Componentes/Dos/juegodos1/juegodos1.component';
 import { Juegodos2Component } from './Componentes/Dos/juegodos2/juegodos2.component';
 import { Juegodos3Component } from './Componentes/Dos/juegodos3/juegodos3.component';
-import { Juegodos4Component } from './componentes/dos/juegodos4/juegodos4.component';
+import { Juegodos4Component } from './Componentes/Dos/juegodos1/juegodos4.component';
 import { InicioComponent } from './Componentes/inicio/inicio.component';
 import { MenujuegosComponent } from './Componentes/menujuegos/menujuegos.component';
 import { Juegonueve1Component } from './Componentes/Nueve/juegonueve1/juegonueve1.component';
@@ -33,6 +32,8 @@ import { Juegouno3Component } from './Componentes/Uno/juegouno3/juegouno3.compon
 import { MenuprincipalComponent } from './Componentes/menuprincipal/menuprincipal.component';
 import { Menu3Component } from './Componentes/menu3/menu3.component';
 import { Menu4Component } from './Componentes/menu4/menu4.component';
+import { Juegocuatro4Component } from './Componentes/Cuatro/juegocuatro4/juegocuatro4.component';
+import { Juegocinco4Component } from './Componentes/Cinco/juegocinco4/juegocinco4.component';
 
 const routes: Routes = [
   {
@@ -58,9 +59,6 @@ const routes: Routes = [
   },
   {
     path: 'Juegouno3', component: Juegouno3Component
-  },
-  {
-    path: 'Juegodos1', component: Juegodos1Component
   },
   {
     path: 'Juegodos2', component: Juegodos2Component
@@ -90,6 +88,9 @@ const routes: Routes = [
     path: 'Juegocuatro3', component: Juegocuatro3Component
   },
   {
+    path: 'Juegocuatro4', component: Juegocuatro4Component
+  },
+  {
     path: 'Juegocinco1', component: Juegocinco1Component
   },
   {
@@ -97,6 +98,9 @@ const routes: Routes = [
   },
   {
     path: 'Juegocinco3', component: Juegocinco3Component
+  },
+  {
+    path: 'Juegocinco4', component: Juegocinco4Component
   },
   {
     path: 'Juegoseis1', component: Juegoseis1Component

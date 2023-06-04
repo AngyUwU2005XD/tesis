@@ -2,28 +2,39 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-juegodos4',
-  templateUrl: './juegodos4.component.html',
-  styleUrls: ['./juegodos4.component.css']
+  selector: 'app-juegocuatro4',
+  templateUrl: './juegocuatro4.component.html',
+  styleUrls: ['./juegocuatro4.component.css']
 })
-export class Juegodos4Component {
+export class Juegocuatro4Component {
   constructor(private router: Router){}
   correcto: any;
-
+  num42:any=0;
+  menu3uwu: any=0;
   menu()
   {
-    this.router.navigate(['menup']);
+     this.router.navigate(['menup']);
   }
-  Juegodos2()
+  menu3()
   {
-     this.router.navigate(['Juegodos2']);
-    }
-    Juegodos3()
-    {
-      this.router.navigate(['Juegodos3']);
-    }
-    
-
+    this.router.navigate(['menu3']);
+  }
+  menu4()
+  {
+    this.router.navigate(['menu4']);
+  }
+  menu5()
+  {
+    this.router.navigate(['menu']);
+  }
+  Juegouno3()
+  {
+     this.router.navigate(['Juegocuatro3']);
+  }
+  Juegouno1()
+  {
+     this.router.navigate(['Juegocuatro1']);
+  }
   imagen1!: string;
   imagen2!: string;
   imagen3!: string;
@@ -33,10 +44,12 @@ export class Juegodos4Component {
   incorrecta= false;
   ngOnInit(): void 
   {
-        this.imagen1='../../../assets/pngs/fl/2.png'
-        this.imagen2='../../../assets/pngs/lom/4.png'
-        this.imagen3='../../../assets/pngs/nu/9.png'
-        this.imagen4='../../../assets/pngs/ma/6.png'
+    this.num42=localStorage.getItem('num41');    
+    this.imagen1='../../../../assets/numeros_actu/ncua.png'
+    this.imagen2='../../../../assets/numeros_actu/nuno.png'
+    this.imagen3='../../../../assets/numeros_actu/nseis.png'
+    this.imagen4='../../../../assets/numeros_actu/nsiete.png'
+    this.menu3uwu=localStorage.getItem('menu3uwu');
     this.arreglo =
     [
       {
@@ -75,11 +88,13 @@ export class Juegodos4Component {
     {
       this.correcta=true;
       console.log(this.correcta);
+      this.num42++;
     }
     else
     {
       this.incorrecta=true;
     }
+    localStorage.setItem('num42',this.num42.toString());
   }
 
   cerrar()
@@ -87,17 +102,19 @@ export class Juegodos4Component {
     this.correcta=false;
     this.incorrecta=false;
   }
+  
   playSound() {
     const audio = new Audio();
-    audio.src = '../../../../assets/Audios/1 audio.mp3';
+    audio.src = '../../../../assets/Audios_completos/Número 4/4 audio n2.aac';
     audio.load();
     audio.play();
   }
+
   botonsonido() {
     const audio = new Audio();
     audio.src = '../../../../../assets/AudiosUwU/sonidoBoton.mp3';
     audio.load();
     audio.play();
   }
-}
 
+}

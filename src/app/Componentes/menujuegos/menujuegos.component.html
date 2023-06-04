@@ -1,12 +1,35 @@
 <div class="cursor">
 
-    <body  style="background-size: cover; height: 811px; width: 100%; text-align: center;" background="./../../../assets/317764184_690249502586474_8948383456222696427_n.jpg" >
+    <body  style="background-size: cover; text-align: center; text-align: down; height: 97.3vh; overflow: hidden; background-repeat: no-repeat;font-family: 'Montserrat',sans-serif;" background={{image}} >
         <br>
         <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: azure; text-align: center;"></h1>
         <audio  src="../../../assets/AudiosUwU/menú .aac" autoplay  class="audio" loop></audio>
+
+<div *ngIf="ho==3" style="justify-content: space-evenly ; display: flex; padding-left: 5%;   position:absolute;">
+    <img class="flor" class="pequeño" src="../../../assets/no ai/luna.png" width="300px">
+
+</div>
+
+<div *ngIf="ho==1" style="justify-content: space-evenly ; display: flex; padding-left: 3%;   position:absolute;">
+    <img class="flor" class="fgrande" src="../../../assets/no ai/nube_1.png" width="350px">
+</div>
 <br>
+<div *ngIf="ho==1" style="justify-content: space-evenly ; display: flex; padding-left: 75%;   position:absolute;">
+    <img class="flor" class="girar" src="../../../assets/no ai/nube_1.png" width="350px">
+</div>
+
+<div *ngIf="ho==2" style="justify-content: space-evenly ; display: flex; padding-left: 3%;   position:absolute;">
+    <img class="flor" class="fgrande" src="../../../assets/no ai/nube_2.png" width="350px">
+</div>
 <br>
+<div *ngIf="ho==2" style="justify-content: space-evenly ; display: flex; padding-left: 75%;   position:absolute;">
+    <img class="flor" class="girar" src="../../../assets/no ai/nube_2.png" width="350px">
+</div>
 <br>
+<div *ngIf="ho==2" style="justify-content: space-evenly ; display: flex; padding-left: 30%;   position:absolute;">
+    <img class="flor" class="girar" src="../../../assets/no ai/ave1.png" width="150px">
+</div>
+
     <div style="justify-content: space-evenly ;flex-direction: row; display: flex; padding-left: 7.5%; padding-right: 7.5%;">
         <button (click)="Juego1(); botonsonido()"class="boton" ><img src="../../../assets/1 (1).png" style="width: 150px;"></button>
         <button (click)="Juego2(); botonsonido()" class="boton"><img src="../../../assets/2 (1).png" style="width: 150px;"></button>
@@ -14,22 +37,51 @@
     </div>
     <br>
     <br>
-
+    <div *ngIf="ho==2" style="justify-content: space-evenly ; display: flex; padding-left: 80%;   position:absolute;">
+        <img class="flor" class="fgrande" src="../../../assets/no ai/ave1.png" width="150px">
+    </div>
     <div style="justify-content: space-evenly ;flex-direction: row; display: flex; padding-left: 7.5%; padding-right: 7.5%;">
         <button (click)="Juego4(); botonsonido()" class="boton"><img src="../../../assets/4.png" style="width: 150px;"></button>
         <button (click)="Juego5(); botonsonido()" class="boton"><img src="../../../assets/5.png" style="width: 150px;" ></button>
         <button (click)="Juego6(); botonsonido()" class="boton"><img src="../../../assets/6.png" style="width: 150px;" ></button>
     </div>
     <br>
-    <br>
-
+    <div *ngIf="ho==2" style="justify-content: space-evenly ; display: flex; padding-left: 30%;   position:absolute;">
+        <img class="flor" class="pequeño" src="../../../assets/no ai/ave1.png" width="200px">
+    </div>
     <div style="justify-content: space-evenly ;flex-direction: row; display: flex; padding-left: 7.5%; padding-right: 7.5%;">
         <button (click)="Juego7(); botonsonido()" class="boton"><img src="../../../assets/7.png" style="width: 150px;"></button>
         <button (click)="Juego8(); botonsonido()" class="boton"><img src="../../../assets/8.png" style="width: 150px;"></button>
         <button (click)="Juego9(); botonsonido()" class="boton"><img src="../../../assets/9.png" style="width: 150px;"></button>
     </div>
 
+    <button (click)="menu(); botonsonido()" class="boton"><img src="../../../../assets/casita (1).png" width="50px"></button>
+    <div *ngIf="ho==1" style="justify-content: space-evenly ;flex-direction: row; display: flex; position: absolute;">
+        <div style="justify-content: space-evenly ;flex-direction: row; display: flex; padding-left: 700%; padding-right: 0%;">
+            <img class="flor" class="fgrande" src="../../../assets/no ai/flor_N.png" width="100px">
+        </div>
+        <div style="justify-content: space-evenly ;flex-direction: row; display: flex; padding-left: 600%; padding-right: 10%;">
+            <img class="flor" class="girar" src="../../../assets/no ai/flor_A.png" width="100px">
+        </div>
+    </div> 
+
+    <div *ngIf="ho==2" style="justify-content: space-evenly ;flex-direction: row; display: flex; position: absolute;">
+        <div style="justify-content: space-evenly ;flex-direction: row; display: flex; padding-left: 700%; padding-right: 0%;">
+            <img class="flor" class="fgrande" src="../../../assets/no ai/flor_N.png" width="100px">
+        </div>
+        <div style="justify-content: space-evenly ;flex-direction: row; display: flex; padding-left: 600%; padding-right: 10%;">
+            <img class="flor" class="girar" src="../../../assets/no ai/flor_V.png" width="100px">
+        </div>
+    </div> 
     
+    <div *ngIf="ho==3" style="justify-content: space-evenly ;flex-direction: row; display: flex;">
+        <div style="justify-content: space-evenly ;flex-direction: row; display: flex; padding-left: 36%; padding-right: 5%;">
+            <img class="flor" class="fgrande" src="../../../assets/no ai/flor_N.png" width="100px">
+        </div>
+        <div style="justify-content: space-evenly ;flex-direction: row; display: flex; padding-left: 50%; padding-right: 20%;">
+            <img class="flor" class="girar" src="../../../assets/no ai/flor_A.png" width="100px">
+        </div>
+    </div> 
     </body>
 
 

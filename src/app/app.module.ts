@@ -32,10 +32,12 @@ import { Juegonueve3Component } from './Componentes/Nueve/juegonueve3/juegonueve
 import { InicioComponent } from './Componentes/inicio/inicio.component';
 import { MenujuegosComponent } from './Componentes/menujuegos/menujuegos.component';
 import { ModalComponent } from './Componentes/modal/modal.component';
-import { Juegodos4Component } from './componentes/dos/juegodos4/juegodos4.component';
+import { Juegodos4Component } from './Componentes/Dos/juegodos1/juegodos4.component';
 import { MenuprincipalComponent } from './Componentes/menuprincipal/menuprincipal.component';
 import { Menu3Component } from './Componentes/menu3/menu3.component';
 import { Menu4Component } from './Componentes/menu4/menu4.component';
+import { Juegocuatro4Component } from './Componentes/Cuatro/juegocuatro4/juegocuatro4.component';
+import { Juegocinco4Component } from './Componentes/Cinco/juegocinco4/juegocinco4.component';
 
 
 
@@ -76,6 +78,8 @@ import { Menu4Component } from './Componentes/menu4/menu4.component';
     MenuprincipalComponent,
     Menu3Component,
     Menu4Component,
+    Juegocuatro4Component,
+    Juegocinco4Component,
 
   ],
   imports: [

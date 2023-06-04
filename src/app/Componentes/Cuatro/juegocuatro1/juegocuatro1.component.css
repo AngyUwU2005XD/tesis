@@ -8,7 +8,14 @@
     position: relative;
     transform: translate(34%, 200px);
 }
-
+.estrella{
+  position: absolute;
+  transform: translate(1444%, -135.5px);
+}
+.carita{
+  position: absolute;
+  transform: translate(315%, -80px);
+}
 .contenedor{
   width: 50vw;
   height: 40vh;
@@ -20,13 +27,47 @@
   transform: translate(40%, 25px);
 
 }
-.boton{
+
+.boton
+{
+  width: 189px;
+  background: transparent;
+  cursor: url(../../../../assets/señalarcursor.png), auto;
+  border: none;
+  transition: transform .2s ease;
+}
+  
+.boton:hover 
+{
+  transform: scale(1.2);
+}
+  
+.incorrecto
+{
   width: 189px;
   background: transparent;
   border: none;
   cursor: url(../../../../assets/señalarcursor.png), auto;
+  transition: transform .8s ease;
 }
-
+  
+.incorrecto:hover 
+{
+  transform: rotate(360deg);
+}
+.correcto
+{
+  width: 189px;
+  background: transparent;
+  border: none;
+  cursor: url(../../../../assets/señalarcursor.png), auto;
+  transition: transform .5s ease;
+}
+  
+.correcto:hover 
+{
+  transform: translate(100px) scale(1.2);
+}
 
 
 .modalincorrecto {

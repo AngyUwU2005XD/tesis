@@ -3,12 +3,66 @@
     background: transparent;
     border: none;
     position: relative;
-    transform: translate(-17%, 10px);
-    cursor: url(../../../assets/señalarcursor.png), auto;
-
+    cursor: url(../../../assets/señalarcursor.png), auto;   
+}
+.grande
+{
+  background: transparent;
+  border: none;
+  cursor: url(../../../assets/señalarcursor.png), auto;
+  transition: transform .5s ease;
+}
+  
+.grande:hover 
+{
+  transform: scale(1.2);
 }
 
-.cursor{
-    cursor: url(../../../assets/cursor_flecha.png), auto;
-  }
+.cursor {
+  cursor: url(../../../assets/cursor_flecha.png) 100 100, cell;
+}
+
+
+
+
+.fgrande
+{
+  background: transparent;
+  border: none;
+  cursor: url(../../../assets/señalarcursor.png), auto;
+  transition: transform .5s ease;
+}
   
+.fgrande:hover 
+{
+  transform: scale(1.2);
+}
+.nube{
+  gap: 1500px 1190px;
+  position:absolute;
+  transform: translate(250%, 0px);
+}
+.girar
+{
+  background: transparent;
+  border: none;
+  transition: transform .8s ease;
+}
+  
+.girar:hover
+{
+  transform: rotate(360deg);
+}
+
+.pequeño
+{
+  background: transparent;
+  cursor: url(../../../assets/señalarcursor.png), auto;
+  border: none;
+  transition: transform .5s ease;
+}
+
+.pequeño:hover 
+{
+  transform: scale(0.5);
+}

@@ -1,10 +1,88 @@
-.boton{
+.boton1{
     width: 150px;
     background: transparent;
     cursor: url(../../../assets/señalarcursor.png), auto;
     border: none;
+    transition: transform .5s ease;
 }
+
+.boton1:hover {
+    transform: rotate(360deg);
+  }
+  .boton2{
+    width: 150px;
+    background: transparent;
+    cursor: url(../../../assets/señalarcursor.png), auto;
+    border: none;
+    transition: transform .5s ease;
+}
+
+.boton2:hover {
+    transform: scale(0.5);
+  }
+  .boton3{
+    width: 150px;
+    background: transparent;
+    cursor: url(../../../assets/señalarcursor.png), auto;
+    border: none;
+    transition: transform .5s ease;
+}
+
+.boton3:hover {
+    transform: skew(25deg, 25deg);
+  }
 
 .cursor{
     cursor: url(../../../assets/cursor_flecha.png), auto;
+}
+.contenedor{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 155px 90px;
+  position: relative;
+  transform: translate(0%, 0px);
+  
+  }
+
+  .fgrande
+{
+  background: transparent;
+  border: none;
+  cursor: url(../../../assets/señalarcursor.png), auto;
+  transition: transform .5s ease;
+}
+  
+.fgrande:hover 
+{
+  transform: scale(1.2);
+}
+.nube{
+  gap: 1500px 1190px;
+  position:absolute;
+  transform: translate(250%, 0px);
+}
+.girar
+{
+  background: transparent;
+  border: none;
+  transition: transform .8s ease;
+}
+  
+.girar:hover
+{
+  transform: rotate(360deg);
+}
+
+.pequeño
+{
+  background: transparent;
+  cursor: url(../../../assets/señalarcursor.png), auto;
+  border: none;
+  transition: transform .5s ease;
+}
+
+.pequeño:hover 
+{
+  transform: scale(0.5);
 }

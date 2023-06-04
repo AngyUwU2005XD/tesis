@@ -10,13 +10,26 @@ export class Juegouno2Component {
   constructor(private router: Router){}
   correcto: any;
   c:any=0;
-
-
-  
-  
+  menu3uwu:any=0;  
+  uno:any=0;
   menu()
   {
     this.router.navigate(['menup']);
+  }
+  menu3()
+  {
+    this.router.navigate(['menu3']);
+    this.uno=1;
+    localStorage.setItem('uno',this.uno.toString());
+
+  }
+  menu4()
+  {
+    this.router.navigate(['menu4']);
+  }
+  menu5()
+  {
+    this.router.navigate(['menu']);
   }
   
   Juegouno3()
@@ -50,8 +63,9 @@ export class Juegouno2Component {
         this.imagen2='../../../../assets/numeros_actu/ndos.png'
         this.imagen3='../../../../assets/numeros_actu/ntres.png'
         this.imagen4='../../../../assets/numeros_actu/ncua.png'
+        this.menu3uwu=localStorage.getItem('menu3uwu');
         this.arreglo=
-
+        
         [
           {
             url: this.imagen1, 
@@ -73,7 +87,6 @@ export class Juegouno2Component {
         console.log(this.arreglo[0].url)
         this.arreglo= this.mezclar(this.arreglo);
       }
-    
       mezclar(array: any)
       {
         for(let i=array.length-1; i>0; i--)
@@ -95,15 +108,17 @@ export class Juegouno2Component {
         {
           this.incorrecta=true;
         }
+        localStorage.setItem('contador3uwu',this.c.toString());
       }
-    
+      
       cerrar()
       {
         this.correcta=false;
         this.incorrecta=false;
       }
 
-      playSound() {
+      playSound() 
+      {
         const audio = new Audio();
         audio.src = '../../../../assets/Audios_completos/Número 1 /1 audio n 2.aac';
         audio.load();

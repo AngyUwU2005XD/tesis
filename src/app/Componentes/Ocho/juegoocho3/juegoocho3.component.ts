@@ -9,9 +9,23 @@ import { Router } from '@angular/router';
 export class Juegoocho3Component {
   constructor(private router: Router){}
   correcto: any;
+  num83:any=0;
+  menu3uwu:any=0;
   menu()
   {
      this.router.navigate(['menup']);
+  }
+  menu3()
+  {
+    this.router.navigate(['menu3']);
+  }
+  menu4()
+  {
+    this.router.navigate(['menu4']);
+  }
+  menu5()
+  {
+    this.router.navigate(['menu']);
   }
   Juegotres2()
   {
@@ -28,9 +42,11 @@ export class Juegoocho3Component {
   ngOnInit(): void 
   {
     this.imagen1='../../../assets/pngs/fl/8.png'
-    this.imagen2='../../../assets/res/mariposa.png'
-    this.imagen3='../../../assets/pngs/nu/5.png'
-    this.imagen4='../../../assets/pngs/es/4.png'
+    this.imagen2='../../../assets/res/flor.png'
+    this.imagen3='../../../assets/pngs/fl/5.png'
+    this.imagen4='../../../assets/pngs/fl/4.png'
+    this.menu3uwu=localStorage.getItem('menu3uwu');
+    this.num83=localStorage.getItem('num82');
     this.arreglo =
     [
       {
@@ -69,6 +85,7 @@ export class Juegoocho3Component {
     {
       this.correcta=true;
       console.log(this.correcta);
+      this.num83++;
     }
     else
     {

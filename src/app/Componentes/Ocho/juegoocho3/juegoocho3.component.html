@@ -1,4 +1,4 @@
-<body class="cursor" style="background-size: cover; height: 811px; width: 100%;" background="./../../../../assets/fondos aaaaaaa/fondo_juego_3-3.png">
+<body class="cursor" style="background-size: cover; height: 97.3vh; width: 100%;" background="./../../../../assets/fondos aaaaaaa/fondo_juego_3-3.png">
     <h1 style="color: transparent;">.</h1>
     <audio  src="../../../../assets/Audios_completos/CorregidoAudios/nivel 3pez.aac" autoplay  class="audio"></audio>
     <div class="uwu">
@@ -9,6 +9,27 @@
                 <img src="../../../../assets/ImagenesAudios/audio3.png" width="200px" height="200px">
             </button>
         </div>
+        <div class="estrella" *ngIf="num83==2">
+            
+
+            <img class="girar" src="../../../../assets/cososdedos/estre2.png" width="85px" >
+            <img class="girar" src="../../../../assets/cososdedos/estre2.png" width="85px" >
+            <div class="carita2">
+                <img class="grande" src="../../../../assets/cososdedos/carita2.png" width="85px" >
+            </div>
+            <br>
+            
+    </div>
+    <div class="estrella3" *ngIf="num83==3">
+        
+        <img src="../../../../assets/cososdedos/estre2.png" width="85px" >
+        <img src="../../../../assets/cososdedos/estre2.png" width="85px" >
+        <img src="../../../../assets/cososdedos/estre2.png" width="85px" >
+        <br>
+        <div class="carita3">
+            <img src="../../../../assets/cososdedos/carita3.png" width="85px" >
+        </div>
+    </div>
         <div class="contenedor">
             <button class="boton" *ngFor="let item of arreglo" (click)="verificar(item.respuesta)"><img [src]='item.url' width="180" height="180"> </button>
         </div>
@@ -21,7 +42,15 @@
             <img src="../../../../assets/ext/gato_1.png" width="100px" >
             <audio  src="../../../../assets/AudiosUwU/correctoaudio.mp3" autoplay  class="audio"></audio>
             <br>
-            <button  class="boton" (click)="menu(); botonsonido()" style="background: transparent; border: none;"><img src="../../../../assets/ext/seguir.png" width="189px"></button>
+            <div *ngIf="menu3uwu==3">
+                <button (click)="menu3(); botonsonido()" class="correcto" style="background: transparent; border: none;"><img src="../../../../assets/ext/seguir.png" width="189px"></button>
+            </div>
+            <div *ngIf="menu3uwu==4">
+                <button (click)="menu4(); botonsonido()" class="correcto" style="background: transparent; border: none;"><img src="../../../../assets/ext/seguir.png" width="189px"></button>
+            </div>
+            <div *ngIf="menu3uwu==5">
+                <button (click)="menu5(); botonsonido()" class="correcto" style="background: transparent; border: none;"><img src="../../../../assets/ext/seguir.png" width="189px"></button>
+            </div>    
             </div>
           
             </div>
@@ -31,12 +60,20 @@
             <div class="modalcont">
             <img src="../../../../assets/ext/gato_2.png" width="150px" >
             <audio  src="../../../../assets/AudiosUwU/errorsonido.mp3" autoplay  class="audio"></audio>
-            <button (click)="cerrar(); botonsonido()" class="boton"><img src="../../../../assets/ext/repetir.png" width="150px"></button>
+            <button (click)="cerrar(); botonsonido()" class="incorrecto"><img src="../../../../assets/ext/repetir.png" width="150px"></button>
             </div>
           
             </div>
     
         <br>
         
-    <button (click)="menu(); botonsonido()" class="boton"><img src="../../../../assets/casita (1).png" width="50px"></button>
+        <div *ngIf="menu3uwu==3">
+            <button (click)="menu3(); botonsonido()" class="boton"><img src="../../../../assets/casita (1).png" width="50px"></button>
+        </div>
+        <div *ngIf="menu3uwu==4">
+            <button (click)="menu4(); botonsonido()" class="boton"><img src="../../../../assets/casita (1).png" width="50px"></button>
+        </div>
+        <div *ngIf="menu3uwu==5">
+            <button (click)="menu5(); botonsonido()" class="boton"><img src="../../../../assets/casita (1).png" width="50px"></button>
+        </div>
         </body>

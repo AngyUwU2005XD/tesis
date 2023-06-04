@@ -7,10 +7,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./juegocinco2.component.css']
 })
 export class Juegocinco2Component {
+  menu3uwu: any=0;
   constructor(private router: Router){}
+  num52:any=0;
   menu()
   {
      this.router.navigate(['menup']);
+  }
+  menu3()
+  {
+    this.router.navigate(['menu3']);
+  }
+  menu4()
+  {
+    this.router.navigate(['menu4']);
+  }
+  menu5()
+  {
+    this.router.navigate(['menu']);
   }
   Juegouno3()
   {
@@ -30,10 +44,12 @@ export class Juegocinco2Component {
   incorrecta= false;
   ngOnInit(): void 
   {
+        this.num52=localStorage.getItem('num51');    
         this.imagen1='../../../../assets/numeros_actu/ncin.png'
         this.imagen2='../../../../assets/numeros_actu/nuno.png'
         this.imagen3='../../../../assets/numeros_actu/nseis.png'
         this.imagen4='../../../../assets/numeros_actu/nsiete.png'
+        this.menu3uwu=localStorage.getItem('menu3uwu');
     this.arreglo =
     [
       {
@@ -72,11 +88,13 @@ export class Juegocinco2Component {
     {
       this.correcta=true;
       console.log(this.correcta);
+      this.num52++;
     }
     else
     {
       this.incorrecta=true;
     }
+    localStorage.setItem('num52',this.num52.toString());
   }
 
   cerrar()
